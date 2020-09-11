@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model PaymentEditModel
+
+<div class="text-center">
+    <h1 class="display-4">Send test Payment request to Safecharge:</h1>
+
+    <form asp-controller="Home" asp-action="Payment" method="post">
+        <div class="mb-2">
+            @Html.DisplayNameFor(m => m.Amount)
+            @Html.EditorFor(m => m.Amount)
+        </div>
+        <div class="mb-2">
+            @Html.DisplayNameFor(m => m.Currency)
+            @Html.EditorFor(m => m.Currency)
+        </div>
+        <div class="mb-2">
+            <button type="submit">Send</button>
+        </div>
+    </form>
+</div>
