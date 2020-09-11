@@ -59,3 +59,11 @@ namespace Safecharge.Sample
 }
 
 ```
+
+## Sample applications configuration
+
+***Safecharge.Sample*** is a simple console application, which uses the configuration from `Safecharge.Sample/bin/Debug/netcoreapp3.1/appsettings.json` to get the merchant information and requests data.
+
+***Safecharge.WebSample***  is a sample web project as an example for referencing and using the Safecharge wrapper from a MVC application. Merchant configuration is in `Safecharge.WebSample/appsettings.json`.
+
+***Safecharge.Test.Core*** is the unit tests project targeting .NET Core 3.1. Merchant configuration is in `Safecharge.Test.Core/bin/Debug/netcoreapp3.1/testhost.dll.config`.
