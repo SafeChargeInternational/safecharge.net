@@ -24,7 +24,8 @@ namespace Safecharge.Sample
 
         private static readonly IConfigurationBuilder builder = new ConfigurationBuilder()
                  .SetBasePath(Directory.GetCurrentDirectory())
-                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                 .AddJsonFile($"appsettings.local.json", optional: true);
 
         private static IConfigurationRoot config;
         private static MerchantConfig merchantInfoConfig;

@@ -59,11 +59,23 @@ namespace Safecharge.Sample
 }
 
 ```
-
 ## Sample applications configuration
 
-***Safecharge.Sample*** is a simple console application, which uses the configuration from `Safecharge.Sample/bin/Debug/netcoreapp3.1/appsettings.json` to get the merchant information and requests data.
+***Safecharge.Sample*** is a simple console application, which uses configuration file to get the merchant information and requests data. <br>
+If you have newly checked-out the solution, create `Safecharge.Sample/bin/Debug/netcoreapp3.1/appsettings.local.json` in format like `Safecharge.Sample/bin/Debug/netcoreapp3.1/appsettings.json` to set configuration.
 
-***Safecharge.WebSample***  is a sample web project as an example for referencing and using the Safecharge wrapper from a MVC application. Merchant configuration is in `Safecharge.WebSample/appsettings.json`.
+***Safecharge.WebSample***  is a sample web project as an example for referencing and using the Safecharge wrapper from a MVC application. <br>
+If you have newly checked-out the solution, create `Safecharge.WebSample/appsettings.Development.json` for merchant configuration in format like `Safecharge.WebSample/appsettings.json`.
 
-***Safecharge.Test.Core*** is the unit tests project targeting .NET Core 3.1. Merchant configuration is in `Safecharge.Test.Core/bin/Debug/netcoreapp3.1/testhost.dll.config`.
+***Safecharge.Test.Core*** is the unit tests project targeting .NET Core 3.1. Merchant configuration should be in `Safecharge.Test.Core/bin/Debug/netcoreapp3.1/testhost.dll.config` in the following format:
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <appSettings>
+    <add key="MerchantKey" value="MERCHANT_KEY_PROVIDED_BY_SAFECHARGE" />
+	<add key="MerchantId" value="MERCHANT_ID_PROVIDED_BY_SAFECHARGE" />
+	<add key="MerchantSiteId" value="MERCHANT_SITE_ID_PROVIDED_BY_SAFECHARGE" />
+	<add key="ServerHost" value="https://ppp-test.safecharge.com/ppp/" />
+  </appSettings>
+</configuration>
+```
