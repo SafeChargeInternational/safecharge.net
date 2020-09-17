@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>SafeCharge’s REST API SDK for .NET provides developer tools for accessing Safecharge's REST API. SafeCharge’s REST API is a simple, easy to use, secure and stateless API, which enables online merchants and service providers to process consumer payments through SafeCharge’s payment gateway. For SafeCharge REST API documentation, please see: https://www.safecharge.com/docs/api/</Description>
   </PropertyGroup>
 
   <ItemGroup>
