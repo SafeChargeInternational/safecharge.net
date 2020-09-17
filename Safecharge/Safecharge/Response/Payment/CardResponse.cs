@@ -13,7 +13,7 @@ namespace Safecharge.Response.Payment
 
         public string Bin { get; set; }
 
-        public string LastFourDigits { get; set; }
+        public string Last4Digits { get; set; }
 
         public string CcExpMonth { get; set; }
 
@@ -30,5 +30,11 @@ namespace Safecharge.Response.Payment
         public string IsVerified { get; set; }
 
         public ThreeDResponse ThreeD { get; set; }
+
+        public string CardType { get; set; }
+
+        public string CardBrand { get; set; }
+
+        public string UniqueCc { get; set; }
     }
 }

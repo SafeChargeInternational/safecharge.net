@@ -14,6 +14,8 @@ namespace Safecharge.Model.PaymentOptionModels.ThreeDModels
         private string merchantURL;
         private string platformType;
         private string version;
+        private string mpiChallengePreference;
+        private string externalRiskScore;
 
         public string IsDynamic3D
         {
@@ -94,5 +96,25 @@ namespace Safecharge.Model.PaymentOptionModels.ThreeDModels
         public Account Account { get; set; }
 
         public V2AdditionalParams V2AdditionalParams { get; set; }
+
+        public string MpiChallengePreference
+        {
+            get { return this.mpiChallengePreference; }
+            set
+            {
+                Guard.RequiresMaxLength(value?.Length, 1, nameof(this.MpiChallengePreference));
+                this.mpiChallengePreference = value;
+            }
+        }
+
+        public string ExternalRiskScore
+        {
+            get { return this.externalRiskScore; }
+            set
+            {
+                Guard.RequiresMaxLength(value?.Length, 3, nameof(this.ExternalRiskScore));
+                this.externalRiskScore = value;
+            }
+        }
     }
 }

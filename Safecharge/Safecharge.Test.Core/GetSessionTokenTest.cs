@@ -175,6 +175,20 @@ namespace Safecharge.Test.Core
         }
 
         [Test]
+        public void TestInitializingSafechargeWithMerchantInfo()
+        {
+            var safeCharge = new Safecharge(
+                new MerchantInfo(
+                    MerchantKeyValue,
+                    MerchantIdValue,
+                    MerchantSiteIdValue,
+                    ServerHostValue,
+                    HashAlgorithmType.SHA256));
+
+            Assert.IsNotNull(safeCharge);
+        }
+
+        [Test]
         public void TestInitializingSafechargeWithWrongMerchantId()
         {
             ActualValueDelegate<object> safeChargeDelegate = () => new Safecharge(

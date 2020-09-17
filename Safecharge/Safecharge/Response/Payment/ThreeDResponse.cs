@@ -52,5 +52,7 @@ namespace Safecharge.Response.Payment
         public string AcsTtransId { get; set; }
 
         public string DsTransId { get; set; }
+
+        public string IsLiabilityOnIssuer { get; set; }
     }
 }

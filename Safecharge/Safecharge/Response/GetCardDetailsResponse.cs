@@ -20,5 +20,11 @@ namespace Safecharge.Response
         public string IssuerCountry { get; set; }
 
         public string Currency { get; set; }
+
+        public string Last4Digits { get; set; }
+
+        public string CcExpMonth { get; set; }
+
+        public string CcExpYear { get; set; }
     }
 }

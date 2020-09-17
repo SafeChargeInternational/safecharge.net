@@ -77,5 +77,7 @@ namespace Safecharge.Request
                 this.isPartialApproval = value;
             }
         }
+
+        public CurrencyConversion CurrencyConversion { get; set; }
     }
 }

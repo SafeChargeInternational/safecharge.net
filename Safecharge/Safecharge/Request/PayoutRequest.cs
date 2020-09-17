@@ -25,6 +25,8 @@ namespace Safecharge.Request
         private string amount;
         private string currency;
         private string comment;
+        private string phone;
+        private string userPmId;
 
         /// <summary>
         /// Empty constructor used for mapping from config file.
@@ -129,5 +131,25 @@ namespace Safecharge.Request
         public UrlDetails UrlDetails { get; set; }
 
         public CardData CardData { get; set; }
+
+        public string Phone
+        {
+            get { return this.phone; }
+            set
+            {
+                Guard.RequiresMaxLength(value?.Length, Constants.MaxLengthPhone, nameof(this.Phone));
+                this.phone = value;
+            }
+        }
+
+        public string UserPmId
+        {
+            get { return this.userPmId; }
+            set
+            {
+                Guard.RequiresMaxLength(value?.Length, Constants.MaxLengthStringId, nameof(this.UserPmId));
+                this.userPmId = value;
+            }
+        }
     }
 }

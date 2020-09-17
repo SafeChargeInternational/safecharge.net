@@ -128,5 +128,9 @@ namespace Safecharge.Model.Common
                 this.county = value;
             }
         }
+
+        public string Locale { get; set; }
+
+        public string Language { get; set; }
     }
 }

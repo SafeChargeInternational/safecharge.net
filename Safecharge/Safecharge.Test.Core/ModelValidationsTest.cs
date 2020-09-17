@@ -542,7 +542,8 @@ namespace Safecharge.Test.Core
                 DynamicDescriptor = new DynamicDescriptor { MerchantName = "Merchant", MerchantPhone = "Phone" },
                 UrlDetails = new UrlDetails { BackUrl = "", FailureUrl = "", NotificationUrl = "", PendingUrl = "", SuccessUrl = "" },
                 UserDetails = new CashierUserDetails { FirstName = "Jane", LastName = "Smith", Address = "340689 main St.", City = "London", Country = "GB", Email = "jane.smith@safecharge.com", County = "SCountyU", DateOfBirth = "1990-08-10", Phone = "3598885111111", State = "", Zip = "SDC 33334U" },
-                Items = new List<Item> { new Item { Name = "Name", Price = "0", Quantity = "0" } }
+                Items = new List<Item> { new Item { Name = "Name", Price = "0", Quantity = "0" } },
+                CurrencyConversion = new Model.PaymentModels.CurrencyConversion { Type = "", OriginalAmount = "", OriginalCurrency = "" }
             };
 
             Assert.Pass();
@@ -657,7 +658,8 @@ namespace Safecharge.Test.Core
                     City = "",
                     Id = "",
                     CountryCode = "",
-                }
+                },
+                PreventOverride = "0"
             };
 
             var response = requestExecutor.OpenOrder(openOrderRequest).GetAwaiter().GetResult();
@@ -738,6 +740,7 @@ namespace Safecharge.Test.Core
             Assert.Pass();
 
         }
+
         [Test]
         public void TestGetAndSetModelPayoutRequest()
         {
@@ -750,7 +753,9 @@ namespace Safecharge.Test.Core
                 null,
                 new UserPaymentOption { })
             {
-                Comment = null
+                Comment = null,
+                UserPmId = "",
+                Phone = ""
             };
 
             Assert.Pass();

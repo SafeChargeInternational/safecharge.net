@@ -128,5 +128,15 @@ namespace Safecharge.Model.Common
                 this.county = value;
             }
         }
+
+        public string AddressMatch { get; set; }
+
+        public string AddressLine2 { get; set; }
+
+        public string AddressLine3 { get; set; }
+
+        public string HomePhone { get; set; }
+
+        public string WorkPhone { get; set; }
     }
 }

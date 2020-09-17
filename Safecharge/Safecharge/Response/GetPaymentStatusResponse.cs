@@ -1,4 +1,5 @@
 ﻿using Safecharge.Response.Common;
+using Safecharge.Response.Payment;
 
 namespace Safecharge.Response
 {
@@ -28,5 +29,7 @@ namespace Safecharge.Response
         public string UserTokenId { get; set; }
 
         public string TransactionId { get; set; }
+
+        public PaymentOptionResponse PaymentOption { get; set; }
     }
 }

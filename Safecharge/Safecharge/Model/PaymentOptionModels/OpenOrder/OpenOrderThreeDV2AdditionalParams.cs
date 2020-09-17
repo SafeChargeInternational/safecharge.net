@@ -13,6 +13,8 @@ namespace Safecharge.Model.PaymentOptionModels.OpenOrder
         private string giftCardCurrency;
         private string preOrderDate;
         private string preOrderPurchaseInd;
+        private string shipIndicator;
+        private string challengeWindowSize;
 
         public string DeliveryEmail
         {
@@ -81,5 +83,25 @@ namespace Safecharge.Model.PaymentOptionModels.OpenOrder
         public string RebillFrequency { get; set; }
 
         public bool ExceptionPayment3DAuth { get; set; }
+
+        public string ShipIndicator
+        {
+            get { return this.shipIndicator; }
+            set
+            {
+                Guard.RequiresMaxLength(value?.Length, 2, nameof(this.ShipIndicator));
+                this.shipIndicator = value;
+            }
+        }
+
+        public string ChallengeWindowSize
+        {
+            get { return this.challengeWindowSize; }
+            set
+            {
+                Guard.RequiresMaxLength(value?.Length, 2, nameof(this.ChallengeWindowSize));
+                this.challengeWindowSize = value;
+            }
+        }
     }
 }

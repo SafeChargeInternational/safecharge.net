@@ -17,6 +17,7 @@ namespace Safecharge.Request
     {
         private string productId;
         private string isRebilling;
+        private string preventOverride;
 
         /// <summary>
         /// Empty constructor used for mapping from config file.
@@ -69,6 +70,20 @@ namespace Safecharge.Request
                 }
 
                 this.isRebilling = value;
+            }
+        }
+
+        public string PreventOverride
+        {
+            get { return this.preventOverride; }
+            set
+            {
+                if (value != null)
+                {
+                    Guard.RequiresBool(value, nameof(this.PreventOverride));
+                }
+
+                this.preventOverride = value;
             }
         }
     }

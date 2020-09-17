@@ -10,5 +10,7 @@
         public string UserPaymentOptionId { get; set; }
 
         public CardResponse Card { get; set; }
+
+        public AlternativePaymentMethodResponse AlternativePaymentMethod { get; set; }
     }
 }
