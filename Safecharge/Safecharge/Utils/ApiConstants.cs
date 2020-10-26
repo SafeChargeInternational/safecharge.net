@@ -26,6 +26,7 @@
 
         public const string TransactionTypeAuth = "Auth";
         public const string TransactionTypeSale = "Sale";
+        public const string TransactionTypePreAuth = "PreAuth";
         public const string TransactionTypeInitAuth3D = "InitAuth3D";
 
         public const string PaymentMethodTypeDeposit = "DEPOSIT";

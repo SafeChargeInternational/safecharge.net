@@ -49,7 +49,7 @@ namespace Safecharge
         /// <param name="productId">A free text field used to identify the product/service sold. If this parameter is not sent or is sent with an empty value, then it contains the concatenation of all item names up until the parameter maximum length. Risk rules and traffic management rules are usually built based on this field value.</param>
         /// <param name="customData">This parameter can be used to pass any type of information. If sent in request, then it is passed on to the payments gateway, and is visible in Nuvei’s back-office tool transaction reporting and is returned in response.</param>
         /// <param name="relatedTransactionId">The ID of the original transaction.</param>
-        /// <param name="transactionType">ApiConstants.TransactionTypeSale or ApiConstants.TransactionTypeAuth</param>
+        /// <param name="transactionType">ApiConstants.TransactionTypeSale / ApiConstants.TransactionTypeAuth / ApiConstants.TransactionTypePreAuth</param>
         /// <param name="autoPayment3D"></param>
         /// <param name="isMoto">Mark the transaction as MOTO (mail order/telephone order).</param>
         /// <param name="subMethodDetails">Submethod details.</param>
@@ -271,7 +271,7 @@ namespace Safecharge
         /// <param name="customSiteName">The merchant’s site name. This is useful for merchants operating many websites that are distinguished only by name. Risk rules and traffic management rules are usually built based on this field value.</param>
         /// <param name="productId">A free text field used to identify the product/service sold. If this parameter is not sent or is sent with an empty value, then it contains the concatenation of all item names up until the parameter maximum length. Risk rules and traffic management rules are usually built based on this field value.</param>
         /// <param name="customData">This parameter can be used to pass any type of information. If sent in request, then it is passed on to the payments gateway, and is visible in Nuvei’s back-office tool transaction reporting and is returned in response.</param>
-        /// <param name="transactionType">ApiConstants.TransactionTypeSale or ApiConstants.TransactionTypeAuth</param>
+        /// <param name="transactionType">ApiConstants.TransactionTypeSale / ApiConstants.TransactionTypeAuth / ApiConstants.TransactionTypePreAuth</param>
         /// <param name="isMoto">Mark the transaction as MOTO (mail order/telephone order).</param>
         /// <param name="isRebilling">When performing recurring/rebilling, use this field to indicate the recurring step. (0 or 1)</param>
         /// <param name="rebillingType">When performing recurring/rebilling, use this field to indicate the recurring type. (RECURRING, MIT)</param>
@@ -373,7 +373,7 @@ namespace Safecharge
         /// <param name="customSiteName">The merchant’s site name. This is useful for merchants operating many websites that are distinguished only by name. Risk rules and traffic management rules are usually built based on this field value.</param>
         /// <param name="productId">A free text field used to identify the product/service sold. If this parameter is not sent or is sent with an empty value, then it contains the concatenation of all item names up until the parameter maximum length. Risk rules and traffic management rules are usually built based on this field value.</param>
         /// <param name="customData">This parameter can be used to pass any type of information. If sent in request, then it is passed on to the payments gateway, and is visible in Nuvei’s back-office tool transaction reporting and is returned in response.</param>
-        /// <param name="transactionType">Transaction Type of the request. Possible values for payment request: Auth / Sale.</param>
+        /// <param name="transactionType">Transaction Type of the request. Possible values for payment request: Auth / Sale / PreAuth.</param>
         /// <param name="autoPayment3D"></param>
         /// <param name="userId">The customer’s ID as per the merchant’s userid.</param>
         /// <param name="rebillingType">When performing recurring/rebilling, use this field to indicate the recurring type. (RECURRING, MIT)</param>
