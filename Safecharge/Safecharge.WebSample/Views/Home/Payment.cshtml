@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model PaymentViewModel
+
+<div class="text-center">
+    <h1 class="display-4">Payment response</h1>
+
+    <p>Status: @Model.PaymentResponse.Status</p>
+    <p>ApiType: @Model.PaymentResponse.ApiType</p>
+    <p>AuthCode: @Model.PaymentResponse.AuthCode</p>
+    <p>InternalRequestId: @Model.PaymentResponse.InternalRequestId</p>
+    <p>OrderId: @Model.PaymentResponse.OrderId</p>
+    <p>SessionToken: @Model.PaymentResponse.SessionToken</p>
+    <p>TransactionStatus: @Model.PaymentResponse.TransactionStatus</p>
+    <p>TransactionType: @Model.PaymentResponse.TransactionType</p>
+    <p>Version: @Model.PaymentResponse.Version</p>
+
+    @if (!string.IsNullOrEmpty(Model.PaymentResponse.Reason))
+    {
+        <p>Reason: @Model.PaymentResponse.Reason</p>
+    }
+</div>
