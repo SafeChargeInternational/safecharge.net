@@ -10,6 +10,7 @@ using Safecharge.Response;
 using Safecharge.Response.Payment;
 using Safecharge.Response.Transaction;
 using Safecharge.Utils.Exceptions;
+using Safecharge.Utils.Serialization;
 
 namespace Safecharge
 {
@@ -22,7 +23,13 @@ namespace Safecharge
         private static readonly TimeSpan DefaultTimeoutTimeSpan = new TimeSpan(0, 0, 30);
 
         private static JsonSerializerSettings SerializerSettings =>
-            new JsonSerializerSettings { DateFormatHandling = DateFormatHandling.MicrosoftDateFormat, ContractResolver = new CamelCasePropertyNamesContractResolver() };
+            new JsonSerializerSettings { 
+                DateFormatHandling = DateFormatHandling.MicrosoftDateFormat, 
+                ContractResolver = new CamelCasePropertyNamesContractResolver()
+                {
+                    NamingStrategy = new CustomNamingStrategy()
+                },
+            };
 
         protected static HttpClient HttpClient;
 
