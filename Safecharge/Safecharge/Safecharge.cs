@@ -607,6 +607,27 @@ namespace Safecharge
             return await safechargeRequestExecutor.GetMerchantPaymentMethods(request);
         }
 
+        public Task<GetDCCResponse> GetDccDetails(string clientRequestId, string clientUniqueId, string cardNumber, string originalAmount, string originalCurrency, string currency)
+        {
+            var response = this.safechargeRequestExecutor.GetDCCDetails(
+                new GetDCCRequest(this.merchantInfo, this.sessionToken)
+                {
+                    SessionToken = sessionToken,
+                    MerchantId = merchantInfo.MerchantId,
+                    MerchantSiteId = merchantInfo.MerchantSiteId,
+                    ClientRequestId = clientRequestId,
+                    ClientUniqueId = clientUniqueId,
+                    Amount = originalAmount,
+                    OriginalAmount = originalAmount,
+                    OriginalCurrency = originalCurrency,
+                    Currency = currency,
+                    Apm = "apmgw_expresscheckout"
+
+                });
+
+            return response;
+        }
+
         private string GetSessionToken()
         {
             var request = new GetSessionTokenRequest(merchantInfo);

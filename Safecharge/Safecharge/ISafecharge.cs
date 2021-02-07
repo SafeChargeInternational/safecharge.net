@@ -547,5 +547,13 @@ namespace Safecharge
             string authenticationTypeOnly = null,
             SubMerchant subMerchant = null,
             Addendums addendums = null);
+
+        Task<GetDCCResponse> GetDccDetails(
+    string clientRequestId,
+    string clientUniqueId,
+    string cardNumber,
+    string originalAmount,
+    string originalCurrency,
+    string currency);
     }
 }

@@ -19,6 +19,7 @@
         public const string PayoutUrl = "api/v1/payout.do";
         public const string GetCardDetailsUrl = "api/v1/getCardDetails.do";
         public const string GetMerchantPaymentMethodsUrl = "api/v1/getMerchantPaymentMethods.do";
+        public const string GetDcc = "api/v1/getDccDetails";
 
         public const string TransactionStatusApproved = "APPROVED";
         public const string TransactionStatusDeclined = "DECLINED";

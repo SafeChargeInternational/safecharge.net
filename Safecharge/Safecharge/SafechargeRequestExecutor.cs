@@ -110,6 +110,11 @@ namespace Safecharge
             return await this.PostAsync<GetCardDetailsResponse, GetCardDetailsRequest>(request);
         }
 
+        public async Task<GetDCCResponse> GetDCCDetails(GetDCCRequest request)
+        {
+            return await this.PostAsync<GetDCCResponse, GetDCCRequest>(request);
+        }
+
         public async Task<GetMerchantPaymentMethodsResponse> GetMerchantPaymentMethods(GetMerchantPaymentMethodsRequest request)
         {
             return await this.PostAsync<GetMerchantPaymentMethodsResponse, GetMerchantPaymentMethodsRequest>(request);
