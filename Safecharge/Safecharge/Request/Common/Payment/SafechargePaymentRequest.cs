@@ -40,7 +40,7 @@ namespace Safecharge.Request.Common.Payment
         }
 
         /// <summary>
-        /// Transaction Type of the request. Possible values for payment request: Auth / Sale.
+        /// Transaction Type of the request. Possible values for payment request: Auth / Sale / PreAuth.
         /// </summary>
         public string TransactionType { get; set; }
 
