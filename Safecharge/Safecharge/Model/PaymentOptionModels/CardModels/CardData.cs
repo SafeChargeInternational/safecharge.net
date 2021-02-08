@@ -49,7 +49,7 @@ namespace Safecharge.Model.PaymentOptionModels.CardModels
             get { return this.expirationYear; }
             set
             {
-                Guard.RequiresMaxLength(value?.Length, 2, nameof(this.ExpirationYear));
+                Guard.RequiresMaxLength(value?.Length, 4, nameof(this.ExpirationYear));
                 this.expirationYear = value;
             }
         }
