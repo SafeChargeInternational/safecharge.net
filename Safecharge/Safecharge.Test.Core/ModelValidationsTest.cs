@@ -137,7 +137,7 @@ namespace Safecharge.Test.Core
         {
             ActualValueDelegate<object> createDelegate = () => new ExternalMpi
             {
-                ThreeDProtocolVersion = "4"
+              
             };
 
             Assert.That(createDelegate, Throws.TypeOf<ArgumentException>());
@@ -148,7 +148,6 @@ namespace Safecharge.Test.Core
         {
             _ = new ExternalMpi
             {
-                ThreeDProtocolVersion = "2"
             };
 
             Assert.Pass();
@@ -395,7 +394,7 @@ namespace Safecharge.Test.Core
                 {
                     Acquirer = new Acquirer { Bin = null, MerchantId = null, MerchantName = null },
                     Account = new Account { NameInd = null, Age = null, LastChangeDate = null, LastChangeInd = null, RegistrationDate = null, PasswordChangeDate = null, ResetInd = null, PurchasesCount6M = null, AddCardAttepmts24H = null, TransactionsCount24H = null, TransactionsCount1Y = null, CardSavedDate = null, CardSavedInd = null, AddressFirstUseDate = null, AddressFirstUseInd = null, SuspiciousActivityInd = null },
-                    ExternalMpi = new ExternalMpi { IsExternalMpi = "0", Cavv = "3q2+78r+ur7erb7vyv66vv", Eci = "05", Xid = null, DsTransID = null, ThreeDProtocolVersion = null },
+                    ExternalMpi = new ExternalMpi { IsExternalMpi = "0", Cavv = "3q2+78r+ur7erb7vyv66vv", Eci = "05", Xid = null, DsTransID = null },
                     V2AdditionalParams = new V2AdditionalParams { ChallengePreference = null, DeliveryEmail = null, DeliveryTimeFrame = null, GiftCardAmount = null, GiftCardCount = null, GiftCardCurrency = null, PreOrderDate = null, PreOrderPurchaseInd = null, ReorderItemsInd = null, ShipIndicator = null, RebillExpiry = null, RebillFrequency = null, ChallengeWindowSize = null },
                     MethodCompletionInd = "Y",
                     Version = null,
@@ -432,7 +431,7 @@ namespace Safecharge.Test.Core
             {
                 Acquirer = new Acquirer { Bin = "test", MerchantId = "testMerchantId", MerchantName = "testMerchantName" },
                 Account = new Account { NameInd = "01", Age = "30", LastChangeDate = "20200810", LastChangeInd = "01", RegistrationDate = "20200808", PasswordChangeDate = "20200810", ResetInd = "01", PurchasesCount6M = "0001", AddCardAttepmts24H = "002", TransactionsCount24H = "002", TransactionsCount1Y = "010", CardSavedDate = "20200817", CardSavedInd = "02", AddressFirstUseDate = "20200812", AddressFirstUseInd = "03", SuspiciousActivityInd = "01" },
-                ExternalMpi = new ExternalMpi { IsExternalMpi = "0", Cavv = "3q2+78r+ur7erb7vyv66vv", Eci = "05", Xid = "123123123", DsTransID = "c4e59ceb-a382-4d6a-bc87-385d591fa09d", ThreeDProtocolVersion = "1" },
+                ExternalMpi = new ExternalMpi { IsExternalMpi = "0", Cavv = "3q2+78r+ur7erb7vyv66vv", Eci = "05", Xid = "123123123", DsTransID = "c4e59ceb-a382-4d6a-bc87-385d591fa09d"},
                 V2AdditionalParams = new V2AdditionalParams { ChallengePreference = "02", DeliveryEmail = "test@safecharge.com", DeliveryTimeFrame = "03", GiftCardAmount = "1", GiftCardCount = "41", GiftCardCurrency = "EUR", PreOrderDate = "20220511", PreOrderPurchaseInd = "02", ReorderItemsInd = "01", ShipIndicator = "06", RebillExpiry = "20200101", RebillFrequency = "13", ChallengeWindowSize = "05", ExceptionPayment3DAuth = false },
                 MethodCompletionInd = "Y",
                 Version = "2.1.0",

@@ -24,6 +24,7 @@
         public const string TransactionStatusApproved = "APPROVED";
         public const string TransactionStatusDeclined = "DECLINED";
         public const string TransactionStatusError = "ERROR";
+        public const string TransactionStatusRedirect = "REDIRECT";
 
         public const string TransactionTypeAuth = "Auth";
         public const string TransactionTypeSale = "Sale";

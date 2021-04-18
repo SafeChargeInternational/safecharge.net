@@ -1,4 +1,5 @@
-﻿using Safecharge.Response.Common;
+﻿using Safecharge.Model.Common;
+using Safecharge.Response.Common;
 
 namespace Safecharge.Response
 {
@@ -16,5 +17,7 @@ namespace Safecharge.Response
         /// ID of the user in merchant system.
         /// </summary>
         public string UserTokenId { get; set; }
+
+        public MerchantDetails MerchantDetails { get; set; }
     }
 }

@@ -99,6 +99,42 @@ namespace Safecharge.Test.Core
         }
 
         [Test]
+        public void TestPreAuthPaymentSimpleCardSample()
+        {
+            var response = safecharge.Payment(
+                "USD",
+                "10",
+                
+                new PaymentOption
+                {
+                    Card = new Card
+                    {
+                        CardNumber = "4000023104662535",
+                        CardHolderName = "John Smith",
+                        ExpirationMonth = "12",
+                        ExpirationYear = "22",
+                        CVV = "217"
+                    }
+                },
+                
+                clientRequestId: "1C6CT7V1L",
+                userTokenId: "230811147",
+                clientUniqueId: "12345",
+                orderId: "34383481",
+                transactionType: ApiConstants.TransactionTypePreAuth,
+                deviceDetails: new DeviceDetails { IpAddress = "93.146.254.172" }).GetAwaiter().GetResult();
+
+            SaveResponse(response, "PaymentSimpleCardResponse.json");
+
+            Assert.IsNotNull(response);
+            Assert.IsEmpty(response.Reason);
+            Assert.AreEqual(ResponseStatus.Success, response.Status);
+            Assert.IsNull(response.GwErrorReason);
+            Assert.IsNull(response.PaymentMethodErrorReason);
+            Assert.AreNotEqual(ApiConstants.TransactionStatusError, response.TransactionStatus);
+        }
+
+        [Test]
         public void TestPaymentFullCardSample()
         {
             var response = safecharge.Payment(
@@ -460,7 +496,6 @@ namespace Safecharge.Test.Core
                             ExternalMpi = new ExternalMpi
                             {
                                 Eci = "2",
-                                ThreeDProtocolVersion = "2",
                                 Cavv = "ejJRWG9SWWRpU2I1M21DelozSXU",
                                 DsTransID = "9e6c6e9b-b390-4b11-ada9-0a8f595e8600", //xid in case of 3Dv1 
                             }

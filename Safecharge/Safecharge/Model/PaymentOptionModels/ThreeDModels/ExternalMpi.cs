@@ -13,7 +13,6 @@ namespace Safecharge.Model.PaymentOptionModels.ThreeDModels
         private string cavv;
         private string xid;
         private string dsTransID;
-        private string threeDProtocolVersion;
 
         public string IsExternalMpi
         {
@@ -66,17 +65,6 @@ namespace Safecharge.Model.PaymentOptionModels.ThreeDModels
             {
                 Guard.RequiresMaxLength(value?.Length, 36, nameof(this.DsTransID));
                 this.dsTransID = value;
-            }
-        }
-
-        public string ThreeDProtocolVersion
-        {
-            get { return this.threeDProtocolVersion; }
-            set
-            {
-                Guard.RequiresAllowedValues(value, new List<string> { "1", "2" }, nameof(this.ThreeDProtocolVersion));
-
-                this.threeDProtocolVersion = value;
             }
         }
     }

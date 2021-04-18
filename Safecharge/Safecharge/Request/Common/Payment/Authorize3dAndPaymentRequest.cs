@@ -39,7 +39,7 @@ namespace Safecharge.Request.Common.Payment
 
         public PaymentOption PaymentOption { get; set; }
 
-        public int IsRebilling { get; set; }
+        public int? IsRebilling { get; set; }
 
         public bool AutoPayment3D { get; set; }
     }

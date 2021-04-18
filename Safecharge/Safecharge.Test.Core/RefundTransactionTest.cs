@@ -21,7 +21,7 @@ namespace Safecharge.Test.Core
                 currency,
                 amount,
                 paymentResponse.TransactionId)
-            { AuthCode = paymentResponse.AuthCode };
+            {  };
 
             var response = requestExecutor.RefundTransaction(request).GetAwaiter().GetResult();
             

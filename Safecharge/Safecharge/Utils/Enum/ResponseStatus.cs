@@ -8,6 +8,7 @@
         Success,
         Error,
         Approved,
-        Declined
+        Declined,
+        Redirect
     }
 }

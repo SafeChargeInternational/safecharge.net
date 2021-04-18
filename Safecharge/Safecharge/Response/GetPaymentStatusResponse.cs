@@ -1,4 +1,5 @@
-﻿using Safecharge.Response.Common;
+﻿using Safecharge.Model.Common;
+using Safecharge.Response.Common;
 using Safecharge.Response.Payment;
 
 namespace Safecharge.Response
@@ -31,5 +32,8 @@ namespace Safecharge.Response
         public string TransactionId { get; set; }
 
         public PaymentOptionResponse PaymentOption { get; set; }
+        public string Amount { get; set; }
+        public string Currency { get; set; }
+        public PartialApproval PartialApproval { get; set; }
     }
 }
