@@ -34,7 +34,7 @@
         public const string PaymentMethodTypeDeposit = "DEPOSIT";
         public const string PaymentMethodTypeWithdrawal = "WITHDRAWAL";
 
-        public const string SourceApplication = "30";
+        public const string SourceApplication = "NET_SDK";
 
         public const string SdkVersion = "sdk_dotnet_ver";
     }

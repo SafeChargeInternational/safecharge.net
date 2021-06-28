@@ -16,7 +16,7 @@ You have the following options to choose from:
 - Unity 2018.1+
 
 ### NuGet
-https://www.nuget.org/packages/Safecharge/1.0.2
+https://www.nuget.org/packages/Safecharge/1.0.4
 
 ## Running your first request
 
