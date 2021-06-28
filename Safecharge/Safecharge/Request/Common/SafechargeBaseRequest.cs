@@ -67,7 +67,7 @@ namespace Safecharge.Request.Common
             {
                 var fvi = FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly()?.Location);
 
-                return fvi != null ? $"{ApiConstants.SdkVersion}_{fvi.FileVersion}" : string.Empty; 
+                return fvi != null ? $"{ApiConstants.SdkVersion}_{fvi.ProductVersion}" : string.Empty; 
             }
         } 
 
