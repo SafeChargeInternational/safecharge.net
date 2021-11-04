@@ -17,5 +17,7 @@ namespace Safecharge.Model.PaymentMethodModels
         public List<LocalizationMessage> ValidationMessage { get; set; }
 
         public List<LocalizationMessage> Caption { get; set; }
+
+        public List<APMDetailes> ListValues { get; set; }
     }
 }
