@@ -8,7 +8,7 @@ namespace Safecharge.Model.PaymentMethodModels
     {
         public string Name { get; set; }
         public string Type { get; set; }
-        public List<LocalizationMessage> Caption { get; set; }
+        public string Caption { get; set; }
         public List<ListValue> ListValues { get; set; }
     }
 }
